@@ -3,7 +3,11 @@
 Edição de vídeos por código: gráficos animados, textos, ícones, setas,
 contadores, punch-ins de câmera e efeitos sonoros, tudo sincronizado com a fala.
 
-## Estrutura
+Os projetos novos são feitos em **Remotion**, na pasta [`remotion/`](remotion/README.md).
+O motor em Python (`edicao/`) foi a primeira versão e continua fornecendo os
+efeitos sonoros sintetizados que o projeto Remotion usa.
+
+## Estrutura (motor em Python)
 
 ```
 edicao/                 motor reutilizável
