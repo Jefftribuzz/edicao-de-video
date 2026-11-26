@@ -1,0 +1,74 @@
+{
+  "_sobre": "Anúncio Selaria Pet Prime - Black Friday 2026 (aprovado pelo cliente). Tempos por frase da transcrição.",
+  "work": "/tmp/pet-prime-work",
+  "output": "/home/user/edicao-de-video/pet-prime-black-friday-2026/PetPrime_BlackFriday2026_editado.mp4",
+  "brand": "SELARIA PET PRIME",
+  "fixes": {"elas": "Selas", "eber": "Heber", "acentuaino book": "assento em nobuck", "coro": "couro", "a sinox": "em inox", "zap": "Zap"},
+  "sfx_gain": 0.19,
+  "music": {"file": "/tmp/pet-prime-work/musica.m4a", "start": 69.4, "db": -13},
+
+  "badge": {"top": "BLACK", "band": "FRIDAY", "tag": "2026",
+            "intro_at": {"at": "black friday", "off": -0.07},
+            "intro_end": {"at": "essa é a sua", "off": -0.1},
+            "repeat": [{"at": "black friday", "n": 2}]},
+
+  "highlights": [
+    {"at": "essa é a sua melhor oportunidade", "text": "ESSA É A SUA\\N{MELHOR}\\N{OPORTUNIDADE}"},
+    {"at": "a sela vai completa pra você", "text": "A SELA VAI\\N{COMPLETA}\\NPRA VOCÊ"},
+    {"at": "linda barrigueira em neoprene", "text": "LINDA\\N{BARRIGUEIRA}\\NEM {NEOPRENE}"},
+    {"start": {"at": "mas na black friday", "off": -0.1}, "end": "na black friday", "at": "mas", "text": "MAS...", "size": 190},
+    {"at": "na black friday", "text": "NA {BLACK}\\N{FRIDAY}", "size": 170},
+    {"at": "desconto de r$ 250", "text": "DESCONTO DE\\N{R$ 250}", "size": 150},
+    {"at": "a mais vendida do mercado", "text": "A {MAIS VENDIDA}\\NDO MERCADO"},
+    {"at": "chama aqui no zap que dá negócio", "end": 99, "text": "CHAMA AQUI\\NNO {ZAP} QUE\\NDÁ {NEGÓCIO}"}
+  ],
+
+  "lists": [
+    {"side": "right", "style": "white", "sfx": "sparkle", "sfx_vol": 0.7, "punch": true,
+     "end": {"at": "a sela vai completa", "off": -0.1},
+     "items": [
+       {"text": "PRETA", "at": "preta", "swatch": [20, 20, 20]},
+       {"text": "MARROM", "at": "marrom", "swatch": [92, 52, 30]},
+       {"text": "MARROM HEBER", "at": "marrom heber", "swatch": [58, 34, 22]},
+       {"text": "ARTESANAL MARROM HEBER", "at": "artesanal marrom heber", "swatch": [120, 70, 38]},
+       {"text": "ARTESANAL HAVANA", "at": "artesanal havana", "swatch": [181, 116, 62]}]},
+    {"side": "left", "end": "sem contar",
+     "items": [
+       {"text": "PEITORAL", "at": "peitoral"},
+       {"text": "LÁTEGOS DE FITA", "at": "látegos"},
+       {"text": "PARALAMA", "at": "paralama"},
+       {"text": "ESTRIBOS ENCAPADOS", "at": "estribos"}]},
+    {"side": "left", "end": "a sela custa",
+     "items": [
+       {"text": "ASSENTO EM NOBUCK", "at": "assento em nobuck"},
+       {"text": "COURO LEGÍTIMO", "at": "couro legítimo"},
+       {"text": "SUADOR DE PELO", "at": "suador"},
+       {"text": "FERRAGENS EM INOX", "at": "ferragens"}]}
+  ],
+
+  "price": {"old": "1.899", "discount": "250", "label": "A SELA CUSTA",
+            "old_at": "r$ 1.899", "old_end": {"at": "mas na black friday", "off": -0.05},
+            "new_at": {"at": "na sela", "off": 0.26}, "new_end": "e na compra"},
+
+  "stickers": [
+    {"text": "PRONTA ENTREGA", "style": "yellow", "icon": "check", "size": 54, "at": {"at": "pronta entrega", "off": -0.08}, "dur": 1.0, "y": 1200},
+    {"text": "ENVIAMOS PARA TODO O BRASIL", "style": "yellow", "icon": "truck", "size": 44, "at": "enviamos", "end": "e na compra", "y": 1450},
+    {"text": "MANTA DE BRINDE", "style": "red", "icon": "gift", "size": 58, "at": "manta", "dur": 0.9, "y": 1150, "sfx": "ding"},
+    {"text": "OFERTA POR TEMPO LIMITADO", "style": "red", "icon": "clock", "size": 48, "at": "pessoal", "end": "então aproveita", "y": 1160, "pulse": true, "sfx": "swish"}
+  ],
+  "cta": {"text": "CHAMA NO ZAP", "at": "chama aqui no zap"},
+
+  "slow_zooms": [
+    {"start": "selas três tambores", "end": "temos na opção", "to": 1.07},
+    {"start": "a sela custa", "end": "mas na black friday", "to": 1.07},
+    {"start": "pessoal", "end": "então aproveita", "to": 1.1}
+  ],
+  "zooms": [{"start": {"at": "r$ 250", "off": 0.45}, "end": {"at": "r$ 250", "off": 1.05}, "to": 1.12, "punch": true}],
+  "flashes": [{"t": 5.83, "amp": 0.6}, {"t": 39.0, "amp": 0.6}, {"t": {"at": "r$ 250", "off": 0.48}, "amp": 0.7}],
+  "shakes": [{"start": {"at": "r$ 250", "off": 0.48}, "amp": 18}],
+  "sfx": [
+    ["swish", 5.78, 0.6], ["swish", 38.95, 0.6],
+    ["riser", {"at": "mas na black friday", "off": -0.25}, 0.6],
+    ["impact", {"at": "r$ 250", "off": 0.43}, 0.85]
+  ]
+}
