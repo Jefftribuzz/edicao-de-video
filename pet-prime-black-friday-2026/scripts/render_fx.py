@@ -207,7 +207,7 @@ while True:
             if c < 1:
                 r_, g_, b_, a_ = lk.split(); a_ = a_.point(lambda v: int(v * c)); l = Image.merge("RGBA", (r_, g_, b_, a_))
             comp_clip(frame, l, int(px), int(py))
-        for s in stars:
+        for s in (stars if tl.get("stars", False) else []):  # estrelinhas desligadas a pedido
             v = (math.sin((t * s["sp"] + s["ph"]) * 2 * math.pi) + 1) / 2
             v = v ** 3 * c
             if v < 0.05:
