@@ -42,7 +42,7 @@ for n in files:
     fc.append(f"[{idx[n]}:a]asplit={k}{outs}" if k > 1 else f"[{idx[n]}:a]anull{outs}")
     for j, (t, v) in enumerate(uses[n]):
         ms = int(t * 1000)
-        fc.append(f"[{n}{j}]volume={v * 0.55 * 0.7:.3f},adelay={ms}|{ms}[s_{n}{j}]")
+        fc.append(f"[{n}{j}]volume={v * 0.55 * 0.35:.3f},adelay={ms}|{ms}[s_{n}{j}]")
         labels.append(f"[s_{n}{j}]")
 fc.append("".join(labels) + f"amix=inputs={len(labels)}:normalize=0:duration=longest[fxmix]")
 mix_in = "[voice][fxmix][mus]" if MUSIC else "[voice][fxmix]"

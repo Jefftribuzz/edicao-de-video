@@ -99,10 +99,10 @@ FLASHES = [dict(t=0.58), dict(t=5.83, amp=0.6), dict(t=8.5, amp=0.35), dict(t=16
            dict(t=39.0, amp=0.6), dict(t=43.0), dict(t=47.5, amp=0.7), dict(t=48.3, amp=0.5),
            dict(t=60.5, amp=0.45)]
 # flashes leves coloridos nas cores (brancos curtos)
-for t0 in (9.18, 10.30, 10.94, 12.76, 13.70, 15.60):
-    FLASHES.append(dict(t=t0, amp=0.35, dur=0.12))
+# (removido: flashes brancos nas cores alteravam a cor da sela) for t0 in (9.18, 10.30, 10.94, 12.76, 13.70, 15.60):
+# (removido: flashes brancos nas cores alteravam a cor da sela)     FLASHES.append(dict(t=t0, amp=0.35, dur=0.12))
 SHAKES = [dict(start=0.6, amp=14), dict(start=43.0, amp=22, dur=0.45), dict(start=47.5, amp=18), dict(start=62.2, amp=12)]
-COLOR_FX = [dict(start=8.45, end=16.2), dict(start=25.6, end=28.2)]
+COLOR_FX = []  # sem filtro de cor: selas com a cor original do vídeo
 
 tl = dict(gfx_dir=GFX, zoom_focus_y=0.40, overlays=OV, zooms=ZOOMS, flashes=FLASHES, shakes=SHAKES,
           blurs=[dict(start=h["start"], end=h["end"]) for h in HIGHLIGHTS if h.get("blur")],
