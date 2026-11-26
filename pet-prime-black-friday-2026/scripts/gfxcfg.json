@@ -1,0 +1,22 @@
+{"price": {"old": "1.899", "new": "250", "off": "250"},
+ "pills": [
+  {"file": "txt_selaria.png", "text": "SELARIA PET PRIME", "style": "white", "size": 60},
+  {"file": "tag_pronta.png", "text": "PRONTA ENTREGA", "style": "yellow", "icon": "check", "size": 54},
+  {"file": "c_preta.png", "text": "PRETA", "style": "white", "swatch": [20,20,20]},
+  {"file": "c_marrom.png", "text": "MARROM", "style": "white", "swatch": [92,52,30]},
+  {"file": "c_marrom2.png", "text": "MARROM HEBER", "style": "white", "swatch": [58,34,22]},
+  {"file": "c_art1.png", "text": "ARTESANAL MARROM HEBER", "style": "white", "swatch": [120,70,38]},
+  {"file": "c_art2.png", "text": "ARTESANAL HAVANA", "style": "white", "swatch": [181,116,62]},
+  {"file": "i_peitoral.png", "text": "PEITORAL", "style": "dark", "icon": "check"},
+  {"file": "i_lategos.png", "text": "LÁTEGOS DE FITA", "style": "dark", "icon": "check"},
+  {"file": "i_paralama.png", "text": "PARALAMA", "style": "dark", "icon": "check"},
+  {"file": "i_estribos.png", "text": "ESTRIBOS ENCAPADOS", "style": "dark", "icon": "check"},
+  {"file": "i_nobuck.png", "text": "ASSENTO EM NOBUCK", "style": "dark", "icon": "check"},
+  {"file": "i_couro.png", "text": "COURO LEGÍTIMO", "style": "dark", "icon": "check"},
+  {"file": "i_suador.png", "text": "SUADOR DE PELO", "style": "dark", "icon": "check"},
+  {"file": "i_inox.png", "text": "FERRAGENS EM INOX", "style": "dark", "icon": "check"},
+  {"file": "tag_envio.png", "text": "ENVIAMOS PARA TODO O BRASIL", "style": "yellow", "icon": "truck", "size": 44},
+  {"file": "tag_brinde.png", "text": "MANTA DE BRINDE", "style": "red", "icon": "gift", "size": 58},
+  {"file": "tag_tempo.png", "text": "OFERTA POR TEMPO LIMITADO", "style": "red", "icon": "clock", "size": 48},
+  {"file": "btn_zap.png", "text": "CHAMA NO ZAP", "style": "green", "icon": "chat", "size": 66, "outline": true}
+ ]}
