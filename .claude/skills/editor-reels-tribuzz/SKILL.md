@@ -20,7 +20,8 @@ Imprime os cortes de cena e a transcrição compacta (`palavra@segundos`). O `--
 
 **2. Montar o `projeto.json`** em `/tmp/<cliente>-work/`, copiando a estrutura do exemplo:
 - `fixes`: corrija erros da transcrição ("acentuaino book" → "assento em nobuck"). Chaves com várias palavras funcionam. **Pergunte ao usuário a grafia de nomes de cores, modelos e marcas que soarem estranhos** (ex.: "marrom eber" era "Marrom Heber"). Pergunte antes de renderizar, não depois.
-- `highlights`: as frases que o cliente pediu para destacar. `{palavra}` fica em amarelo e `\\N` quebra a linha. Use 2 a 3 linhas curtas.
+- `highlights`: as frases que o cliente pediu para destacar. `{palavra}` fica em amarelo e `\\N` quebra a linha. Use 2 a 3 linhas de até cerca de 13 caracteres. O `make.py` reduz a fonte sozinho se uma linha não couber (mostra "fonte N" no resumo); se cair abaixo de 110, quebre a linha de outro jeito.
+- `badge`: se o vídeo não falar da campanha, pergunte qual selo usar.
 - `badge`, `price`, `lists`, `stickers`, `cta`: selo, preço, listas laterais, adesivos e botão final.
 - Extras opcionais: `slow_zooms`, `zooms`, `flashes` (use os cortes de cena), `shakes`, `sfx` (`[nome, tempo, volume]`), `no_captions`.
 - Sons disponíveis: whoosh, pop, impact, cash, sparkle, riser, swish, ding.
@@ -45,7 +46,7 @@ Para entregar: copie o MP4 para a pasta do cliente no repositório, faça commit
 Cada item abaixo veio de uma correção do usuário. Mantenha esses padrões, a menos que ele peça diferente:
 - **Cor do produto natural.** Nada de filtro de cor, saturação, luzes coloridas ou flash branco sobre o produto, porque o cliente compra pela cor que vê. `color_fx` fica vazio e `stars` fica `false`.
 - **Efeitos sonoros baixos.** `sfx_gain` 0.19. O cliente pediu duas vezes para baixar, porque os efeitos competiam com a voz. Se pedirem para baixar mais, reduza o `sfx_gain` e rode com `--skip-fx`.
-- **Nunca calcule nem escreva preço final** (ex.: 1.899 − 250). Mostre só os valores falados no vídeo, como o preço cheio e o desconto. O cliente vetou o valor calculado. Exceção: se o pedido liberar "de X por Y", use  (cartão "DE R$ X / POR APENAS R$ Y") em vez de .
+- **Nunca calcule nem escreva preço final** (ex.: 1.899 − 250). Mostre só os valores falados no vídeo, como o preço cheio e o desconto. O cliente vetou o valor calculado. Exceção: se o pedido liberar "de X por Y", use `price.new` (cartão "DE R$ X / POR APENAS R$ Y") em vez de `price.discount`.
 - **Legenda:** Inter Black 86, palavra falada em amarelo, no máximo cerca de 17 caracteres por bloco, escondida durante destaques e cartões de preço.
 - **Saída:** 1080x1920, 30 fps, H.264 a 6 Mbps (cerca de 45 MB/min), áudio a -14 LUFS. Abaixo de 100 MB cabe no GitHub.
 - **Música de fundo:** só instrumental, a -13 dB, com ducking (abaixa sozinha sob a voz) e fade no início e no fim. Escolha o trecho com mais energia começando num tempo forte. Configure em `music.start` (segundos dentro da faixa).
