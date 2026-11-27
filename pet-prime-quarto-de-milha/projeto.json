@@ -1,0 +1,305 @@
+{
+ "work": "/tmp/petprime2-work",
+ "output": "/home/user/edicao-de-video/pet-prime-quarto-de-milha/PetPrime_QuartoDeMilha_BlackFriday2026.mp4",
+ "brand": "SELARIA PET PRIME",
+ "fixes": {
+  "aceto": "assento",
+  "completar": "completas",
+  "caçou": "café"
+ },
+ "sfx_gain": 0.19,
+ "music": {
+  "file": "/tmp/petprime2-work/musica.m4a",
+  "start": 69.4,
+  "db": -13
+ },
+ "badge": {
+  "top": "BLACK",
+  "band": "FRIDAY",
+  "tag": "2026",
+  "intro_at": 0.3,
+  "intro_end": "é descarregar",
+  "repeat": [
+   {
+    "at": "vamos lá"
+   }
+  ]
+ },
+ "highlights": [
+  {
+   "at": "estamos com uma oportunidade exclusiva para você",
+   "text": "{OPORTUNIDADE}\\N{EXCLUSIVA}\\NPRA VOCÊ"
+  },
+  {
+   "at": "sela quarto de milha",
+   "text": "SELA\\N{QUARTO DE}\\N{MILHA}",
+   "size": 150
+  },
+  {
+   "at": "a opção feminina",
+   "end": {
+    "at": "a opção feminina",
+    "edge": "end",
+    "off": 0.6
+   },
+   "text": "A OPÇÃO\\N{FEMININA}",
+   "size": 150
+  },
+  {
+   "at": "todas as nossas selas vão completas",
+   "text": "TODAS AS\\NNOSSAS SELAS\\NVÃO {COMPLETAS}"
+  },
+  {
+   "at": "de 1.999 por apenas 1.699",
+   "text": "DE {R$ 1.999}\\NPOR APENAS\\N{R$ 1.699}",
+   "size": 140
+  },
+  {
+   "at": "me chama aqui embaixo",
+   "end": 99,
+   "text": "ME CHAMA NO\\N{WHATSAPP} QUE\\NDÁ {NEGÓCIO}"
+  }
+ ],
+ "lists": [
+  {
+   "side": "right",
+   "style": "white",
+   "sfx": "sparkle",
+   "sfx_vol": 0.7,
+   "punch": true,
+   "end": {
+    "at": "a opção feminina",
+    "off": -0.1
+   },
+   "items": [
+    {
+     "text": "MARROM ASSENTO LISO",
+     "at": "marrom com assento liso",
+     "swatch": [
+      92,
+      52,
+      30
+     ]
+    },
+    {
+     "text": "MARROM BORDADA",
+     "at": "marrom com bordado",
+     "swatch": [
+      92,
+      52,
+      30
+     ]
+    },
+    {
+     "text": "PRETA LISA OU BORDADA",
+     "at": "preta com assento liso",
+     "swatch": [
+      20,
+      20,
+      20
+     ]
+    },
+    {
+     "text": "MARROM CAFÉ BORDADA",
+     "at": "marrom café",
+     "swatch": [
+      70,
+      42,
+      26
+     ]
+    },
+    {
+     "text": "ROXA PERSONALIZADA",
+     "at": "roxa personalizada",
+     "swatch": [
+      112,
+      48,
+      150
+     ]
+    }
+   ]
+  },
+  {
+   "side": "left",
+   "end": "barrigueiras",
+   "items": [
+    {
+     "text": "CABEÇADA",
+     "at": "cabeçada"
+    },
+    {
+     "text": "RÉDEA DE ALTA QUALIDADE",
+     "at": "rédea"
+    },
+    {
+     "text": "PARALAMA",
+     "at": "paralama"
+    },
+    {
+     "text": "ESTRIBO ENCAPADO",
+     "at": "estribo encapado"
+    }
+   ]
+  },
+  {
+   "side": "left",
+   "end": "além das selas",
+   "items": [
+    {
+     "text": "BARRIGUEIRA",
+     "at": "barrigueiras"
+    },
+    {
+     "text": "LÁTEGOS",
+     "at": "látegos"
+    },
+    {
+     "text": "FIVELAS DE CORAÇÃO",
+     "at": "fivelas de coração"
+    },
+    {
+     "text": "PEITORAL",
+     "at": "peitoral"
+    }
+   ]
+  },
+  {
+   "side": "right",
+   "style": "white",
+   "sfx": "pop",
+   "end": "para você que quer desconto",
+   "items": [
+    {
+     "text": "MANTA AZUL",
+     "at": "manta azul",
+     "swatch": [
+      36,
+      80,
+      200
+     ]
+    },
+    {
+     "text": "MANTA PRETA",
+     "at": {
+      "at": "preta",
+      "n": 2
+     },
+     "swatch": [
+      20,
+      20,
+      20
+     ]
+    },
+    {
+     "text": "MANTA MARROM",
+     "at": "ou marrom",
+     "swatch": [
+      92,
+      52,
+      30
+     ]
+    }
+   ]
+  }
+ ],
+ "price": {
+  "old": "1.999",
+  "new": "1.699",
+  "new_at": "até enquanto",
+  "new_end": "e me chama"
+ },
+ "stickers": [
+  {
+   "text": "CAMPEÃS DE VENDA",
+   "style": "yellow",
+   "icon": "check",
+   "size": 54,
+   "at": "campeãs de venda",
+   "end": "sela marrom café",
+   "y": 1200
+  },
+  {
+   "text": "PRESENTE PRA QUEM VOCÊ AMA",
+   "style": "red",
+   "icon": "gift",
+   "size": 48,
+   "at": "dar de presente",
+   "end": "gostou",
+   "y": 1200,
+   "sfx": "ding"
+  },
+  {
+   "text": "SÓ ENQUANTO ESTE VÍDEO DURAR",
+   "style": "red",
+   "icon": "clock",
+   "size": 46,
+   "at": "até enquanto",
+   "end": "e me chama",
+   "y": 1450,
+   "pulse": true,
+   "sfx": "swish"
+  }
+ ],
+ "cta": {
+  "text": "CHAMA NO WHATSAPP",
+  "at": {
+   "at": "me chama aqui embaixo",
+   "off": 0.8
+  }
+ },
+ "slow_zooms": [
+  {
+   "start": 0,
+   "end": "para isso acontecer",
+   "to": 1.07
+  },
+  {
+   "start": "para você que quer desconto",
+   "end": "de 1.999",
+   "to": 1.08
+  },
+  {
+   "start": "então não perca",
+   "end": "e me chama",
+   "to": 1.08
+  }
+ ],
+ "flashes": [
+  {
+   "t": 6.4,
+   "amp": 0.6
+  },
+  {
+   "t": 52.33,
+   "amp": 0.6
+  }
+ ],
+ "sfx": [
+  [
+   "swish",
+   6.35,
+   0.6
+  ],
+  [
+   "swish",
+   52.28,
+   0.6
+  ],
+  [
+   "riser",
+   {
+    "at": "vamos lá",
+    "off": -1.6
+   },
+   0.6
+  ],
+  [
+   "cash",
+   {
+    "at": "por apenas",
+    "off": 1.0
+   },
+   0.8
+  ]
+ ]
+}

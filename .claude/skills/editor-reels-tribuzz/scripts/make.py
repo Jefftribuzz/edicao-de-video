@@ -134,6 +134,20 @@ for h in P.get("highlights", []):
     b = T(h.get("end", h["at"]), "end") + (0 if "end" in h else 0.3)
     b = max(b, a + 1.2)
     HL.append(dict(start=a, end=b, text=h["text"], size=h.get("size", 132), blur=h.get("blur", True)))
+# encolhe a fonte do destaque se a linha mais larga não couber.
+# No libass o \fs é a altura da linha (ascendente+descendente ~1,21 em na Inter), por isso divide por 1,21;
+# 1,06 = escala final da animação.
+from PIL import ImageFont
+def fit_size(text, size, maxw=1030):
+    lines = re.sub(r"[{}]", "", text).split(r"\N")
+    while size > 60:
+        f = ImageFont.truetype("/usr/share/fonts/opentype/inter/Inter-Black.otf", int(size / 1.21))
+        if max(f.getlength(l) for l in lines) * 1.06 + 2 * 9 <= maxw:
+            break
+        size -= 4
+    return size
+for h in HL:
+    h["size"] = fit_size(h["text"], h["size"])
 HL.sort(key=lambda h: h["start"])
 for i in range(len(HL) - 1):
     HL[i]["end"] = min(HL[i]["end"], HL[i + 1]["start"])
@@ -169,7 +183,7 @@ if PR:
         ov("price_old.png", a, b, 540, 1060, pop=0.35); NO_CAP.append((a, b)); sfx("cash", a, 0.8)
     if "new_at" in PR:
         a = T(PR["new_at"]); b = T(PR.get("new_end")) or a + 4
-        ov("price_new.png", a, b, 540, 1040, width=1000, pop=0.45, pulse=True); NO_CAP.append((a, b))
+        ov("price_new.png", a, b, 540, 1040, pop=0.45, pulse=True, **({} if PR.get("new") else {"width": 1000})); NO_CAP.append((a, b))
         sfx("cash", a, 0.85); FLASHES.append(dict(t=a, amp=0.5))
 
 # ---------------- adesivos e CTA ----------------
@@ -203,7 +217,8 @@ NO_CAP += [(T(a), T(b)) for a, b in P.get("no_captions", [])]
 # ---------------- gráficos ----------------
 gcfg = dict(pills=PILLS)
 if PR:
-    gcfg["price"] = dict(old=PR["old"], discount=PR["discount"], label=PR.get("label", "A SELA CUSTA"))
+    gcfg["price"] = dict(old=PR["old"], discount=PR.get("discount"), new=PR.get("new"),
+                         label=PR.get("label", "A SELA CUSTA"))
 json.dump(gcfg, open(f"{WORK}/gfxcfg.json", "w"), ensure_ascii=False)
 subprocess.run([sys.executable, f"{HERE}/gfx.py", GFX, f"{WORK}/gfxcfg.json"], check=True, stdout=subprocess.DEVNULL)
 if not os.path.exists(f"{SFXD}/impact.wav"):
@@ -276,7 +291,7 @@ json.dump(sorted(SFX, key=lambda s: s[1]), open(f"{WORK}/sfx.json", "w"))
 
 print(f"duração {DUR:.2f}s | destaques {len(HL)} | overlays {len(OV)} | efeitos sonoros {len(SFX)}")
 for h in HL:
-    print(f"  destaque {h['start']:6.2f}-{h['end']:6.2f}  {re.sub(r'[{}]', '', h['text']).replace(chr(92) + 'N', ' ')}")
+    print(f"  destaque {h['start']:6.2f}-{h['end']:6.2f}  fonte {h['size']}  {re.sub(r'[{}]', '', h['text']).replace(chr(92) + 'N', ' ')}")
 if args.no_render:
     sys.exit(0)
 

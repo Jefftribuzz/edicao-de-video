@@ -147,6 +147,24 @@ def price_card(old, new=None, off=None, label="A SELA CUSTA"):
     return card
 
 
+def price_depor(old, new):
+    """Cartão 'DE R$ X / POR APENAS R$ Y' (só quando o cliente libera o preço final)."""
+    W, H = 860, 470
+    im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    d.rounded_rectangle([0, 0, W - 1, H - 1], 40, fill=(12, 12, 12, 238), outline=YEL, width=10)
+    f1 = F(FX, 66); f2 = F(FBI, 172); f3 = F(FB, 56)
+    s1 = f"DE R$ {old}"; w1, h1, ox, oy = bbox(d, s1, f1)
+    x1 = (W - w1) / 2 - ox
+    d.text((x1, 44 - oy), s1, font=f1, fill=(205, 205, 205, 255))
+    d.line([(x1 + ox - 10, 44 + h1 / 2 + 6), (x1 + ox + w1 + 10, 44 + h1 / 2 - 6)], fill=RED, width=11)
+    s3 = "POR APENAS"; w3, h3, ox, oy = bbox(d, s3, f3)
+    d.text(((W - w3) / 2 - ox, 150 - oy), s3, font=f3, fill=WHITE)
+    s2 = f"R$ {new}"; w2, h2, ox, oy = bbox(d, s2, f2)
+    d.text(((W - w2) / 2 - ox, 240 - oy), s2, font=f2, fill=YEL)
+    return shadowed(im, 20, 14, 170)
+
+
 for item in CFG["pills"]:
     bg, fg = STY[item["style"]]
     icon = ICONS.get(item.get("icon")) if item.get("icon") else None
@@ -160,5 +178,8 @@ p = CFG.get("price")
 if p:
     lb = p.get("label", "A SELA CUSTA")
     price_card(p["old"], label=lb).save(f"{OUT}/price_old.png")
-    price_card(p["old"], p["discount"], p["discount"], label=lb).save(f"{OUT}/price_new.png")
+    if p.get("new"):
+        price_depor(p["old"], p["new"]).save(f"{OUT}/price_new.png")
+    else:
+        price_card(p["old"], p["discount"], p["discount"], label=lb).save(f"{OUT}/price_new.png")
 print("ok")
